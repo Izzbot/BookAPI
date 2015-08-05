@@ -1,10 +1,10 @@
 from django.forms import widgets
 from rest_framework import serializers
-from bookapi.models import Book
+from bookapi.models import Books
 
-class BookSerializer(serializers.ModelSerializer):
+class BooksSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Book
+        model = Books
         fields = ('title', 'authors', 'pub_date', 'publisher', 'summary', 'price', 'book_url', 'cover_url')
 
     def create(selfself, validated_data):
